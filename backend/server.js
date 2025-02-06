@@ -16,7 +16,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://encrypto-chat.vercel.app/",
+      "https://fantastic-naiad-1d4fb2.netlify.app/",
     ], // Frontend origin
     methods: ["GET", "POST"],
     credentials: true,
@@ -38,7 +38,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://encrypto-chat.vercel.app/",
+      "https://fantastic-naiad-1d4fb2.netlify.app/",
     ],
     methods: ["GET", "POST"],
     credentials: true, // Allow cookies and headers for auth
