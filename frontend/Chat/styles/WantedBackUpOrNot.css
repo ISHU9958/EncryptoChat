@@ -1,0 +1,151 @@
+/* Container styling */
+/* Background & Layout */
+.wanted-backup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2e, #4a4e69);
+    /* Updated background */
+    background-attachment: fixed;
+    padding: 20px;
+}
+/* Glassmorphism Card */
+.wanted-backup-card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Soft shadow */
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Headings and paragraphs */
+.wanted-backup-card h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: #fff;
+    /* White text for better contrast */
+}
+
+.wanted-backup-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    /* Softer white */
+}
+/* Toggle group styling */
+.toggle-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+/* Toggle group styling */
+.toggle-group label {
+    font-size: 16px;
+    color: #fff;
+    /* White text */
+    cursor: pointer;
+}
+
+.toggle-group input {
+    margin-right: 8px;
+}
+
+/* Recovery input styling */
+.recovery-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.recovery-input label {
+    font-size: 14px;
+    color: #fff;
+}
+
+.recovery-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-top: 8px;
+    background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+}
+
+.recovery-input input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Button styling */
+.proceed-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.proceed-btn:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wanted-backup-card {
+        padding: 16px;
+    }
+
+    .wanted-backup-card h1 {
+        font-size: 20px;
+    }
+
+    .wanted-backup-card p {
+        font-size: 14px;
+    }
+
+    .proceed-btn {
+        font-size: 14px;
+    }
+}
+
+/* Style for the disabled state */
+.proceed-btn:disabled {
+    background-color: #cccccc;
+    /* Faded background */
+    color: #666666;
+    /* Faded text */
+    cursor: not-allowed;
+    /* Disabled cursor */
+    opacity: 0.6;
+    /* Reduced opacity */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-message {
+    color: red !important;
+    font-size: 14px;
+    margin-top: 5px;
+}

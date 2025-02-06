@@ -1,0 +1,148 @@
+/* General Styles */
+
+
+
+
+
+/* Heading */
+.thanks-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.thanks-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Backup Key */
+.backup-key {
+    background-color: #ffffff;
+    color: #007bff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    word-break: break-word;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Note */
+.note {
+    font-size: 0.9rem;
+    margin-top: 15px;
+    color: #f0f8ff;
+}
+
+/* Button */
+.copy-btn {
+    background-color: white;
+    color: #007bff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.copy-btn:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .thanks-card {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .thanks-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .copy-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+
+/* Container */
+.thanks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e1e2e, #4a4e69);
+    height: 100vh;
+    /* Background gradient */
+}
+
+/* Glassmorphism Card */
+.thanks-card {
+    background: rgba(255, 255, 255, 0.15);
+    /* Translucent background */
+    backdrop-filter: blur(10px);
+    /* Glass effect */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.thanks-card h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.thanks-card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.backup-key {
+    background-color: #ffffff;
+    color: #007bff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    word-break: break-word;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+.copy-btn:hover,
+.login-btn:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.login-btn:hover {
+    background-color: #e6b800;
+    color: #fff;
+}

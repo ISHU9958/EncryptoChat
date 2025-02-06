@@ -1,0 +1,232 @@
+/* Chat Navbar */
+.chatnavContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    padding: 0 30px;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    border-bottom: 2px solid #444;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Chat Info */
+.chatInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.chatImg {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.chatImg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.chatName {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Chat Actions (Buttons) */
+.chatActions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Create Group Button */
+.createGroupBtn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.createGroupBtn i {
+    font-size: 1.3rem;
+}
+
+.createGroupBtn:hover {
+    background: linear-gradient(135deg, #0056b3, #003a75);
+    transform: scale(1.05);
+}
+
+/* Logout Icon */
+.logoutBtn {
+    background: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logoutBtn i {
+    font-size: 1.5rem;
+}
+
+.logoutBtn:hover {
+    background: #ff1a1a;
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .chatnavContainer {
+        height: 10vh;
+        padding: 0 20px;
+    }
+
+    .chatImg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chatName {
+        font-size: 1.3rem;
+    }
+
+    .createGroupBtn,
+    .logoutBtn {
+        font-size: 1rem;
+        padding: 10px 14px;
+    }
+
+    .createGroupBtn i,
+    .logoutBtn i {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .chatnavContainer {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .chatInfo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chatActions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .chatImg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chatName {
+        font-size: 1.2rem;
+    }
+
+    .createGroupBtn,
+    .logoutBtn {
+        font-size: 1rem;
+        padding: 10px 14px;
+        width: auto;
+    }
+
+    .createGroupBtn i,
+    .logoutBtn i {
+        font-size: 1.2rem;
+    }
+
+    /* Position logout button absolutely for smaller screens */
+    .logoutBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Position create group button just below logout */
+    .createGroupBtn {
+        position: absolute;
+        top: 60px;
+        /* Adjust based on your layout */
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatnavContainer {
+        padding: 10px;
+    }
+
+    .chatImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chatName {
+        font-size: 1.1rem;
+    }
+
+    .createGroupBtn,
+    .logoutBtn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .createGroupBtn i,
+    .logoutBtn i {
+        font-size: 1.1rem;
+    }
+
+    /* Logout button positioning for very small devices */
+    .logoutBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Adjust positioning for very small devices */
+    .createGroupBtn {
+        position: absolute;
+        top: 60px;
+        /* Adjust as needed */
+        right: 10px;
+    }
+}
+
+/* For larger screens, remove the absolute positioning of the logout button */
+@media (min-width: 769px) {
+    .logoutBtn {
+        position: static;
+    }
+
+    .createGroupBtn {
+        position: static;
+    }
+}

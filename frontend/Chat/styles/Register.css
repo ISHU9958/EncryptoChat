@@ -1,0 +1,359 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.register-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.ant-form-item-label {
+    font-weight: 500;
+    color: #555;
+    text-align: left;
+}
+
+.ant-input,
+.ant-input-password {
+    border-radius: 8px;
+}
+
+.ant-btn-primary {
+    border-radius: 8px;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ant-form-item {
+    margin-bottom: 16px;
+}
+
+.register-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1890ff;
+}
+
+.register-link a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 10px;
+    }
+
+    .register-title {
+        font-size: 1.5rem;
+    }
+
+    .ant-form-item-label {
+        font-size: 14px;
+    }
+
+    .ant-btn-primary {
+        font-size: 14px;
+    }
+
+    .register-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-container {
+        padding: 10px;
+    }
+
+    .register-title {
+        font-size: 1.2rem;
+    }
+
+    .ant-btn-primary {
+        padding: 8px 0;
+    }
+}
+
+/* Background & Layout */
+.register-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2e, #4a4e69);
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassmorphism Card */
+.register-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.register-title {
+    /* color: #fff; */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+/* .ant-form-item-label label {
+    color: #fff !important;
+} */
+
+/* Form Fields */
+.ant-input,
+.ant-input-password {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    /* color: white; */
+}
+
+.ant-input::placeholder,
+.ant-input-password::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ant-input:focus,
+.ant-input-password:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+.ant-btn-primary {
+    background: #ff6b6b;
+    border: none;
+    font-weight: bold;
+}
+
+.ant-btn-primary:hover {
+    background: #ff8787;
+}
+
+/* Register Link */
+.register-link a {
+    color: #ffcb77;
+    font-size: 14px;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .register-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Background & Layout */
+.register-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2e, #4a4e69);
+    background-attachment: fixed;
+    overflow: hidden;
+    /* No scrolling on large screens */
+    padding: 20px;
+}
+
+/* Two-column layout */
+.register-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 850px;
+    min-height: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Left side */
+.register-left {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.register-left h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.register-left p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Right side */
+.register-right {
+    flex: 1;
+    padding: 20px;
+    max-height: 80vh;
+    /* Prevents cutting on small screens */
+    /* overflow-y: auto; */
+    /* Scroll inside form if needed */
+}
+
+/* Title */
+.register-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.ant-form-item-label label {
+    color: #fff !important;
+    
+}
+
+/* Form Fields */
+.ant-input,
+.ant-input-password {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    /* color: white; */
+}
+
+.ant-input::placeholder,
+.ant-input-password::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ant-input:focus,
+.ant-input-password:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Button */
+.ant-btn-primary {
+    background: #ff6b6b;
+    border: none;
+    font-weight: bold;
+}
+
+.ant-btn-primary:hover {
+    background: #ff8787;
+}
+
+/* Scrollbar Styles */
+@media (max-width: 768px) {
+    .register-page {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        /* Allow scrolling on small screens */
+    }
+
+    .register-container {
+        flex-direction: column;
+        width: 90%;
+        min-height: auto;
+    }
+
+    .register-right {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    /* Custom thin scrollbar */
+    .register-page::-webkit-scrollbar {
+        width: 4px;
+        /* Very thin scrollbar */
+    }
+
+    .register-page::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .register-page::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .register-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .register-right {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Scrollbar Track */
+.register-container::-webkit-scrollbar {
+    width: 10px;
+    /* This sets the width of the vertical scrollbar */
+}
+
+/* Scrollbar Thumb */
+.register-container::-webkit-scrollbar-thumb {
+    background-color: #1e1e2e;
+    border-radius: 5px;
+    min-height: 20px !important;
+    /* Adjust the thumb height here */
+}
+

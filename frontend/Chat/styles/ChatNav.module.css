@@ -1,0 +1,142 @@
+/* ChatNav.module.css */
+.chatnavContainerWrapper {
+    min-height: 70vh;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding-right: 10px;
+    position: relative;
+    background-color: black;
+    /* Dark gradient */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Slightly stronger shadow */
+}
+/* Hide the scrollbar */
+.chatnavContainerWrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+
+.chatnavContainerWrapper::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    /* Lighter scrollbar color */
+}
+
+/* Chat container */
+.chatnavContainer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 2px solid #283646;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 8px;
+}
+
+.chatnavContainer:hover {
+    background-color: #283646;
+    /* Darker hover effect */
+    transform: translateX(5px);
+}
+
+/* Chat image styling */
+.chatImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bcd4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatImg:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Chat name styling */
+.chatName {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #f5f5f5;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.chatName:hover {
+    color: #00bcd4;
+    /* Highlight color on hover */
+}
+
+/* Badge styling */
+.chatBadge {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chatnavContainer {
+        height: 8vh;
+        padding: 10px 12px;
+    }
+
+    .chatImg {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chatName {
+        font-size: 1rem;
+        margin-left: 12px;
+    }
+
+    .chatBadge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatnavContainer {
+        height: 7vh;
+        padding: 30px 10px;
+    }
+
+    .chatImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chatName {
+        font-size: 0.9rem;
+        margin-left: 8px;
+    }
+
+    .chatBadge {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+}
+
+/* Badge with zero messages */
+.len0 {
+    padding: 0;
+}
