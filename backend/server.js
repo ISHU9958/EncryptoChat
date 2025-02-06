@@ -19,6 +19,7 @@ app.use(
       "https://encrypto-chat.vercel.app/",
     ], // Frontend origin
     methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 app.use(bodyParser.json());
