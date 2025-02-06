@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: "https://encryptochat.onrender.com" ,// Default to localhost if not set
+        target: "https://localhost/3000" ,// Default to localhost if not set
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
