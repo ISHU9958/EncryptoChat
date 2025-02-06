@@ -1,16 +1,12 @@
 import { io } from 'socket.io-client';
 
 const getServerURL = () => {
-    // Add all possible URLs here
-    const urls = [
-        'http://localhost:3000',
-        'https://44r39gpn-3000.inc1.devtunnels.ms',
-    ];
+  // Get the backend URL from the environment variable
+  const backendURL = import.meta.env.VITE_BACKEND_URL;
 
-    // Select based on current environment
-    const isLocal = window.location.hostname === 'localhost';
-    return isLocal ? urls[0] : urls[1];
+  // If the environment variable is not set, use the local URL
+  return backendURL || 'http://localhost:3000';
 };
 
-const socket = io(getServerURL(),{transports: ['websocket']}); // Dynamically pick the URL
+const socket = io(getServerURL(), { transports: ['websocket'] }); // Dynamically pick the URL
 export default socket;
