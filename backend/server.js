@@ -37,7 +37,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://44r39gpn-5173.inc1.devtunnels.ms",
+      "https://encrypto-chat.vercel.app/",
     ],
     methods: ["GET", "POST"],
     credentials: true, // Allow cookies and headers for auth
