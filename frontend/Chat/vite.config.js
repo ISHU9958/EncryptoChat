@@ -7,9 +7,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000', // Use VITE_BACKEND_URL or fallback to localhost
-        changeOrigin: true, // Ensures that the origin is modified to match the target backend server
-        rewrite: (path) => path.replace(/^\/api/, '/api'), // Ensures that the '/api' prefix is maintained
+        target: process.env.VITE_BACKEND_URL || 'http://localhost:3000', // Default to localhost if not set
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
   },
