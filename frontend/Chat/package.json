@@ -1,7 +1,6 @@
 {
   "name": "chat",
   "private": true,
-  "proxy":"https://encryptochat.onrender.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

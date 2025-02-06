@@ -11,7 +11,7 @@ const Login = () => {
 
   const onFinish = async (values) => {
     try {
-      const res = await axios.post('https://encryptochat.onrender.com/api/v1/user/login', values);
+      const res = await axios.post('/api/v1/user/login', values);
       if (res.data.success) {
         localStorage.setItem('chat-token', res.data.token);
         setUser(res.data.user);
