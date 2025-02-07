@@ -1,17 +1,21 @@
-export const getMsgIdPrivateMsg1 = (socket, setMessages,decryptMessage) => {
-     socket.on(
-      "get-msg-id-private-msg-1",
-      async ({
-        _id,
-        to,
-        from,
-        tocontent,
-        fromcontent,
-        isForward,
-        image,
-        isRead,
-        memberSeen,
-      }) => {
+export const getMsgIdPrivateMsg1 = (socket, setMessages, decryptMessage) => {
+  socket.on(
+    "get-msg-id-private-msg-1",
+    async ({
+      _id,
+      to,
+      from,
+      tocontent,
+      fromcontent,
+      isForward,
+      image,
+      isRead,
+      memberSeen,
+    }) => {
+
+
+      try {
+
         const decryptMsg = await decryptMessage(
           fromcontent,
           localStorage.getItem("privateKey")
@@ -39,6 +43,10 @@ export const getMsgIdPrivateMsg1 = (socket, setMessages,decryptMessage) => {
 
           return updatedMessages;
         });
+
+      } catch (error) {
+        console.log(error);
       }
-    );
+    }
+  );
 };
