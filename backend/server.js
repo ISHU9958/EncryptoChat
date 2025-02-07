@@ -12,17 +12,32 @@ const bodyParser = require("body-parser");
 
 dotenv.config();
 
+
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://fantastic-naiad-1d4fb2.netlify.app/",
+      "https://fantastic-naiad-1d4fb2.netlify.app",
     ], // Frontend origin
     methods: ["GET", "POST"],
     credentials: true,
   })
 );
-app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://fantastic-naiad-1d4fb2.netlify.app");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  res.header("Access-Control-Allow-Credentials", "true");
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
+});
+
+app.use(express.json());
+
 
 try {
   mongoose.connect(process.env.DB_URL);
@@ -38,14 +53,16 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://fantastic-naiad-1d4fb2.netlify.app/",
+      "https://fantastic-naiad-1d4fb2.netlify.app",
     ],
-    methods: ["GET", "POST"],
-    credentials: true, // Allow cookies and headers for auth
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   },
 });
 
-app.use(express.json());
+
+
 app.use("/api/v1/user", userRoutes);
 
 const findGroupByName = async (username) => {
