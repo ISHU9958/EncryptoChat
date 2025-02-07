@@ -10,7 +10,6 @@ axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
 
 createRoot(document.getElementById('root')).render(
   <UserProvider>
-    {console.log('Base URL:', axios.defaults.baseURL)}
     <App />
   </UserProvider>
 );

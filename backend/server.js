@@ -8,7 +8,6 @@ const userRoutes = require("./routes/userRoutes.js");
 const Message = require("./models/MessageModel.js");
 const GroupModel = require("./models/GroupModel.js");
 const UserModel = require("./models/UserModel.js");
-const bodyParser = require("body-parser");
 
 dotenv.config();
 
@@ -17,7 +16,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://fantastic-naiad-1d4fb2.netlify.app",
+      "https://encryptochat.netlify.app",
     ], // Frontend origin
     methods: ["GET", "POST"],
     credentials: true,
@@ -25,7 +24,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://fantastic-naiad-1d4fb2.netlify.app");
+  res.header("Access-Control-Allow-Origin", "https://encryptochat.netlify.app");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.header("Access-Control-Allow-Credentials", "true");
@@ -53,7 +52,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://fantastic-naiad-1d4fb2.netlify.app",
+      "https://encryptochat.netlify.app",
     ],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
